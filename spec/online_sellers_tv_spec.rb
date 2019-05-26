@@ -3,7 +3,7 @@ describe "SerpApi Online Sellers JSON" do
   describe "Online sellers for Sceptre X505BV-FSR - 50 LED TV - 1080p" do
 
     before :all do
-      @response = HTTP.get 'https://serpapi.com/search.json?engine=google_product&product=16618293882053925702&sellers=online&location=Dallas&source=test'
+      @response = HTTP.get 'https://serpapi.com/search.json?engine=google_product&product_id=16618293882053925702&sellers=online&source=test'
       @json = @response.parse
     end
 
