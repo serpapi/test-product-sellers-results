@@ -41,16 +41,16 @@ describe "SerpApi Online Sellers JSON" do
         expect(@first_result["rating"]).to match(/(([1-9][0-9]?|100)%)/).or be_nil
       end
       
-      it "price contains hash" do
-        expect(@first_result["price"]).to be_an(Hash)
+      it "has :additional_price" do
+        expect(@first_result["additional_price"]).to_not be_empty
       end
       
-      it "price has :base" do
-        expect(@first_result["price"]["base"]).to_not be_empty
+      it "has :base_price" do
+        expect(@first_result["base_price"]).to_not be_empty
       end
 
-      it "price has :total" do
-        expect(@first_result["price"]["total"]).to_not be_empty
+      it "has :total_price" do
+        expect(@first_result["total_price"]).to_not be_empty
       end
 
     end
